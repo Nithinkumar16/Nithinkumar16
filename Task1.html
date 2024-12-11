@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Landing Page Using HTML and CSS</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            width: 100%;
+            height: 100vh;
+            background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)) ,url('img.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: sans-serif;
+        }
+
+        nav {
+            width: 100%;
+            height: 100px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 2em;
+            letter-spacing: 2px;
+        }
+
+        .menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    position: relative;
+}
+
+.menu a:before {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Position at the bottom of the link */
+    left: 0;
+    width: 0%; /* Initially hidden */
+    height: 2px; /* Thickness of the underline */
+    background-color: indianred; /* Color of the underline */
+    transition: width 0.3s ease; /* Smooth animation */
+}
+
+.menu a:hover:before {
+    width: 100%; /* Expand underline on hover */
+}
+
+
+        .register a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 20px;
+            background: indianred;   
+            border-radius: 8px;
+            display: inline-block; /* Ensures box-like appearance */
+            border: 2px solid white; /* Optional border for a box effect */
+        }
+
+        .register a:hover {
+            background: white;
+            color: indianred;
+            transition: 0.3s; /* Smooth hover effect */
+        }
+        .h-txt {
+    max-width: 650px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* Text color */
+    font-family: sans-serif;
+}
+
+.h-txt span {
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.h-txt h1 {
+    font-size: 3em;
+    margin-top: 10px;
+}
+
+.h-txt a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    background: indianred;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.h-txt a:hover {
+    background: white;
+    color: indianred;
+    transition: 0.3s;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Content for the landing page goes here -->
+        <nav>
+            <div class="logo">Travel - A</div>
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">Tourist places</a>
+                <a href="#">Best offer</a>
+                <a href="#">Official site</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="register">
+                <a href="#">Register</a>
+            </div>
+        </nav>
+        <section class="h-txt">
+            <span>Enjoy Trip</span>
+            <h1>Travel Agency</h1>
+            <br>
+            <a href="#">Book your Trip</a>
+        </section>
+    </header>
+</body>
+</html>
